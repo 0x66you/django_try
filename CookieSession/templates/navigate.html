@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>操作頁面</title>
+{% endblock %}
+{% block content %}
+<ul>
+    <li>
+        <a href="/">回首頁</a>
+    </li>
+    <li>
+        <a href="/set_cookie/name/jenny/">連到 set_cookies_try 頁面</a>
+    </li>
+    <li>
+        <a href="/get_cookie/name/">連到 get_cookie_try 頁面</a>
+    </li>
+    <li>
+        <a href="/get_allcookies/">取得所有 cookie</a>
+    </li>
+    <li>
+        <a href="/set_cookie2/name2/lily/">連到 set_cookie2 頁面</a>
+    </li>
+    <li>
+        <a href="/delete_cookie/name2">刪除 name2 cookie</a>
+    </li>
+    <li>
+        <a href=/set_session/who/student/">取得 who:student session</a>
+    </li>
+    <li>
+        <a href="/get_allsession/">取得所有 session 資料</a>
+    </li>
+    <li>
+        <a href="/vote/">前往投票頁面！</a>
+    </li>
+    <li>
+        <a href="/login/">前往登入頁面！</a>
+    </li>
+</ul>
+{% endblock %}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+</head>
+<body>
+    <h3>
+        value={{ value }}, value|add:"2" = {{value|add:"2"}}<br/>
+        value|stringformat:"E"={{value|stringformat:"E"}}<br/>
+        list1 = {{ list1 }}, list1|length = {{ list1|length }}<br/>
+
+        {% if pw == "芝麻開門" %}
+        密碼正確<br/>
+        {% else %}
+        密碼錯誤<br/>
+        {% endif %}
+
+        value2={{value2}}, value2|yesno:"是,否,取消" = {{value2|yesno:"是,否,取消"}}<br/>
+        html = {{html}}, html|safe = {{ html|safe }}
+    </h3>
+</body>
+</html>

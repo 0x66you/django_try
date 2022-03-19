@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>顯示所有資料</title>
+</head>
+<body>
+    <h2>顯示學生所有資料</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>gender</th>
+                <th>birthday</th>
+                <th>email</th>
+                <th>phone</th>
+                <th>address</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{student.id}}</td>
+                <td>{{student.cName}}</td>
+                <td>{{student.cSex}}</td>
+                <td>{{student.cBirthday}}</td>
+                <td>{{student.cEmail}}</td>
+                <td>{{student.cPhone}}</td>
+                <td>{{student.cAddr}}</td>
+            </tr>    
+            {% endfor %}
+        </tbody>
+        
+    </table>
+</body>
+</html>

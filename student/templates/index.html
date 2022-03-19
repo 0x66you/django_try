@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}<title>顯示所有資料</title>{% endblock %}
+{% block content %}
+<h2>顯示學生所有資料</h2>
+<h2><a href="/post1/">新增一</a>&emsp;<a href="/post2/">新增二</a></h2>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>gender</th>
+                <th>birthday</th>
+                <th>email</th>
+                <th>phone</th>
+                <th>address</th>
+                <th>編輯</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{{student.id}}</td>
+                <td>{{student.cName}}</td>
+                <td>{{student.cSex}}</td>
+                <td>{{student.cBirthday}}</td>
+                <td>{{student.cEmail}}</td>
+                <td>{{student.cPhone}}</td>
+                <td>{{student.cAddr}}</td>
+                <td>
+                    <a href="/edit/{{ student.id }}/">編輯一</a>
+                    <a href="/edit/{{ student.id }}/load">編輯二</a>
+                    <a href="/delete/{{ student.id }}">刪除</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        
+    </table>
+{% endblock %}

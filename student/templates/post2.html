@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>資料表新增(二)</title>
+{% endblock %}
+{% block content %}
+    <h2>student 資料表新增(二)</h2>
+    <form action="." method="POST" name="form1">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <th>Name</th>
+                <td>{{ postform.cName }}</td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td>
+                    <input name="cSex" type="radio" id="cSex1" value="M" checked="checked">男生
+                    <input name="cSex" type="radio" id="cSex2" value="F">女生
+                </td>
+            </tr>
+            <tr>
+                <th>Birthday</th>
+                <td>{{ postform.cBirthday }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ postform.cEmail }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ postform.cPhone }}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{ postform.cAddr }}</td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="submit" name="button" id="button" value="送出">
+                    <input type="reset" name="button2" id="button2" value="重設">
+                </th>
+            </tr>
+        </table>
+        <span style="color:red;">{{ message }}</span>
+    </form>
+{% endblock %}

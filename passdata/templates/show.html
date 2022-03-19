@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本資料</title>
+</head>
+<body>
+
+    {% for person in persons reversed %}
+    <h3>第 {{ forloop.revcounter }} 位同學</h3>
+    <h3>
+        <ul>
+            <li>姓名：{{ person.name }}</li>
+            <li>手機：{{ person.phone }}</li>
+            <li>年齡：{{ person.age }}</li>
+        </ul>    
+    </h3>
+    {% empty %}
+        沒有任何資料
+    {% endfor %}
+</body>
+</html>
